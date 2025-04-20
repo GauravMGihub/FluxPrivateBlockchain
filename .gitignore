@@ -1,0 +1,7 @@
+#Node data directories
+Geth/node1/data/keystore/
+Geth/node2/data/keystore/
+
+#Passwords
+Geth/node1/password.txt
+Geth/node2/password.txt

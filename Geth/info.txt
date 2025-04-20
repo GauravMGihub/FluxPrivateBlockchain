@@ -1,0 +1,21 @@
+node 1 - 0xe3CCDa925F0C062047dA051BEA1fAE6cA115E5dd
+password - 123 (whatever password you set)
+
+node 2 - 0xa24f73592DDEd5FaB48F6828bc919FbE71eCA5f4
+password - 456 (whatever password you set)
+
+bootnode enode :- 
+
+enode://fa11da82f8c615dcb0f586318637fa368723446c46f532315ef99e6e4d74c2def7576cf782ae3e15928e7a955b6af7c082717dc5af473c8ac348d57bfed082ea@127.0.0.1:0?discport=30301
+
+enode://2db7a0dbba30c19fb1ba1e648e3cd2c85e1fd2cd348b20f7ed02ca9691fa1cb38c6d8de1e74a665628f98a1d6a206ed64a1407f722c30b32ef724a97042c8fb4@127.0.0.1:30303
+
+//
+node 1 running command final : geth --networkid 14333 --datadir "./data" --bootnodes "enode://1b5ebf3079d49728f34a1307ccd81af0468aa133fb9625043ef7a27b6127fdccc4674fb6910935feae9a8c36504bb4429c26175c96518cdb70e97b5fb8941ada@127.0.0.1:30301" --port 30303 --ipcdisable --syncmode full --http --http.corsdomain "*" --http.port 8545 --http.api "eth,net,web3,personal,miner" --allow-insecure-unlock --unlock "0xe3CCDa925F0C062047dA051BEA1fAE6cA115E5dd" --password password.txt --mine console
+
+
+node 2 running command final : geth --datadir ./node2 --networkid 1234 --port 30304 --http --http.port 8546 --ipcdisable --bootnodes "enode://2db7a0dbba30c19fb1ba1e648e3cd2c85e1fd2cd348b20f7ed02ca9691fa1cb38c6d8de1e74a665628f98a1d6a206ed64a1407f722c30b32ef724a97042c8fb4@127.0.0.1:30303" --allow-insecure-unlock console
+
+bootnode running cmd - bootnode -nodekey "./boot.key" -verbosity 7 -addr "127.0.0.1:30301"
+
+// 

@@ -1,0 +1,11 @@
+admin.nodeInfo.encode
+admin.nodeInfo.enode
+net.peerCount
+admin.nodeInfo.encode
+admin.nodeInfo.enode
+net.peerCount
+admin.nodeInfo.enode
+tasklist | findstr gethtasklist | findstr geth
+tasklist | findstr
+taskkill /PID <PID> /F
+net stop geth

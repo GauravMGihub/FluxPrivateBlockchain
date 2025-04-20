@@ -1,0 +1,20 @@
+
+admin.nodeInfo.enode
+admin.peers
+eth.syncing
+admin.addPeer("enode://fa11da82f8c615dcb0f586318637fa368723446c46f532315ef99e6e4d74c2def7576cf782ae3e15928e7a955b6af7c082717dc5af473c8ac348d57bfed082ea@127.0.0.1:30301")
+geth --datadir ./node2 --networkid 1234 --port 30304 --http --http.port 8546 --ipcdisable --bootnodes "enode://2db7a0dbba30c19fb1ba1e648e3cd2c85e1fd2cd348b20f7ed02ca9691fa1cb38c6d8de1e74a665628f98a1d6a206ed64a1407f722c30b32ef724a97042c8fb4@127.0.0.1:30303" --allow-insecure-unlock --authrpc.port 8552
+admin.peers
+geth --datadir ./node2 logs
+geth --datadir ./node1 logsgeth --datadir ./node2 logs
+geth --datadir ./node1 console
+----datadir ./node1 consol--datadir ./node1 console
+--datadir ./node1 logs
+geth --datadir ./node1 --exec "admin.peers" attach
+geth attach ipc:./node1/geth.ipc
+admin.addPeer("enode://<node2_enode>@127.0.0.1:30304")
+admin.addPeer("enode://2db7a0dbba30c19fb1ba1e648e3cd2c85e1fd2cd348b20f7ed02ca9691fa1cb38c6d8de1e74a665628f98a1d6a206ed64a1407f722c30b32ef724a97042c8fb4@127.0.0.1:30304")
+admin.peers
+geth --datadir ./node2 --networkid 1234 --port 30304 --http --http.port 8546 --ipcdisable --bootnodes "enode://2db7a0dbba30c19fb1ba1e648e3cd2c85e1fd2cd348b20f7ed02ca9691fa1cb38c6d8de1e74a665628f98a1d6a206ed64a1407f722c30b32ef724a97042c8fb4@127.0.0.1:30303" --allow-insecure-unlock console
+admin.ppers
+admin.peers
